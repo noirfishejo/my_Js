@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //變數/值 比較運算子 變數/值
+        // 相等 ==
+        // 不相等 != 
+
+        // 預設帳號:abc , 密碼:1234
+
+        // let uid = 'abc';
+        // let upw = '1234';
+
+        // 帳號正確+密碼正確 => 帳密正確
+        // 帳號正確+密碼錯誤 => 密碼錯誤
+        // 帳號錯誤+密碼正確 => 帳號錯誤
+        // 帳號錯誤+密碼錯誤 => 帳密錯誤
+
+        let uid = 'abc';
+        let upw = '1234';
+
+        // 多層條件檢查
+        if (uid == 'abc' && upw == '1234') {
+            console.log('帳密正確');
+        } else if (uid == 'abc' && upw != '1234') {
+            console.log('密碼錯誤');
+        } else if (uid != 'abc' && upw == '1234') {
+            console.log('帳號錯誤');
+        } else {
+            console.log('帳密錯誤');
+        }
+
+        // 單層條件檢查
+        if (uid == 'abc' && upw == '1234') {
+            console.log('帳密正確');
+        }
+        if (uid == 'abc' && upw != '1234') {
+            console.log('密碼錯誤');
+        }
+        if (uid != 'abc' && upw == '1234') {
+            console.log('帳號錯誤');
+        } 
+        if (uid != 'abc' && upw != '1234') {
+            console.log('帳密錯誤');
+        }
+
+    </script>
+</body>
+
+</html>
