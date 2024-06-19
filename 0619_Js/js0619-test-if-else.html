@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 計算bmi -->
+    <!-- bmi = 體重/身高(m)的平方 -->
+    <!-- bmi值取到小數第二位 -->
+    <script>
+        // 建立體重
+        let w = 50;
+
+        // 建立身高
+        let h = 1.55;
+
+        // 建立bmi
+        let bmi;
+
+        // 計算bmi
+        bmi = w / (h * h);
+        // 取出小數點第二位
+        bmi = bmi.toFixed(2);
+        // 字串轉數值
+        bmi = Number(bmi);
+
+        // 測試用
+        bmi = 30;
+
+        console.log(bmi);
+        console.log(`BMI為${bmi}`);
+
+        // 檢查bmi落在哪個區間並顯示訊息結果
+        if (bmi < 18.5) {
+            //檢查條件成立
+            console.log('異常範圍-體重過輕');
+        } else {
+            if (bmi >= 18.5 && bmi < 24) {
+                console.log('正常範圍');
+            } else {
+                // 檢查24<=bmi<27
+                if (bmi >= 24 && bmi < 27) {
+                    console.log('異常範圍-過重');
+                } else {
+                    // 檢查27<=bmi<30
+                    if (bmi >= 27 && bmi < 30) {
+                        console.log('異常範圍-輕度肥胖');
+                    } else {
+                        // 檢查30<=bmi<35
+                        if (bmi >= 30 && bmi < 35) {
+                            console.log('異常範圍-中度肥胖');
+                        } else {
+                            // 檢查bmi>=35
+                            if (bmi >= 35) {
+                                console.log('異常範圍-重度肥胖');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        // 區間資料使用交集邏輯運算子&&(and)
+        // 檢查18.5<=bmi<24
+
+    </script>
+</body>
+
+</html>

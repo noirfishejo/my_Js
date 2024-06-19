@@ -13,7 +13,7 @@
     <!-- bmi值取到小數第二位 -->
     <script>
         // 建立體重
-        let w = 52;
+        let w = 50;
 
         // 建立身高
         let h = 1.55;
@@ -28,20 +28,27 @@
         // 字串轉數值
         bmi = Number(bmi);
 
+        // 測試用
+        // bmi=35;
+
         console.log(bmi);
         console.log(`BMI為${bmi}`);
 
         // 檢查bmi落在哪個區間並顯示訊息結果
+        // 多層檢查(符合條件,執行完就結束檢查)
         if (bmi < 18.5) {
-            //檢查條件成立
-            console.log(`體重過輕`);
+            console.log('異常範圍-體重過輕');
+        }else if (bmi >= 18.5 && bmi < 24) {
+            console.log('正常範圍');
+        }else if (bmi >= 24 && bmi < 27) {
+            console.log('異常範圍-過重');
+        }else if (bmi >= 27 && bmi < 30) {
+            console.log('異常範圍-輕度肥胖');
+        }else if (bmi >= 30 && bmi < 35) {
+            console.log('異常範圍-中度肥胖');
+        }else if (bmi >= 35) {
+            console.log('異常範圍-重度肥胖');
         }
-        // 區間資料使用交集邏輯運算子&&(and)
-        //檢查18.5<=bmi<24
-        if (bmi >= 18.5 && bmi < 24) {
-            console.log(`正常範圍`);
-        }
-
     </script>
 </body>
 
