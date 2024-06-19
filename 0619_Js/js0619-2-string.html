@@ -15,9 +15,31 @@
     <script>
         let catName = "小良";
         console.log(`毛孩名字:${catName}`);
-        catAge = 9;
-        console.log(`毛孩年紀${catAge}歲`);
+        let catAge = 9;
+        console.log(`毛孩年齡:${catAge}歲`);
+        catAge = "9";
+        // 取得資料型態 => typeof(變數名)
+        console.log(typeof(catAge));
+        // 未轉換為數值
+        console.log(`毛孩5年後的年齡:${catAge + 5}歲`);
+        // 已暫時轉換為數值
+        console.log(`毛孩5年後的年齡:${Number(catAge)+5}歲`);
+        console.log(typeof(catAge));
+        // 真正要字串轉數值,必須重新指派轉換結果給原來的變數
+        catAge=Number(catAge);
+        console.log(`毛孩5年後的年齡:${catAge + 5}歲`);
+        console.log(typeof(catAge));
+
+        // 浮點數 => 帶有小數點的資料
+        let pi = 3.14;
+        let r = 6;
+        let area = pi * r * r;
+        console.log(area);
+        console.log(parseInt(area));    //取整數(無條件捨去至整數位)
+        console.log(area.toFixed(2));   //取出小數點二位,回傳型態為字串
+        console.log(Number(area.toFixed(2))+1); //若要運算,必須用Number()轉換
     </script>
+    
 </body>
 
 </html>
