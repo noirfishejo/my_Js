@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 血型判斷(大小寫不同)
+        // A => A型
+        // a => A型
+
+        // if else if
+        let bld;
+        bld = window.prompt("請輸入血型");
+
+        if(bld == null){
+            document.write("您按了取消");
+        } else if (bld == ""){
+            document.write("您尚未填寫");
+        } else if (bld == "a" || bld == "A"){
+            document.write("A型");
+        } else if (bld == "b" || bld == "B"){
+            document.write("B型");
+        } else if (bld == "o" || bld == "O"){
+            document.write("O型");
+        } else if (bld == "ab" || bld == "AB"){
+            document.write("AB型");
+        } else {
+            document.write("血型輸入錯誤");
+        }
+    </script>
+</body>
+
+</html>
