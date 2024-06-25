@@ -13,9 +13,13 @@
         // prompt() => 回傳是一個字串型態的結果
         // 取消時會回傳空值 => null
         let a = prompt('請輸入星期別代號:1-7');
+
+        // trim() => 去除內容前後多餘的空白
+
         // length => 資料的長度
         // console.log(a.length);
-        switch (a) {
+
+        switch (a.trim()) {
             case null:
                 document.write('您按了取消');
                 break; //結束switch

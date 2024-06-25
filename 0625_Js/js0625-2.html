@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
@@ -12,25 +12,118 @@
         // 血型判斷(大小寫不同)
         // A => A型
         // a => A型
-
         // if else if
-        let bld;
-        bld = window.prompt("請輸入血型");
 
-        if(bld == null){
+
+
+        // 使用 變數名.trim() 去除空白
+
+        let bld1 = prompt("請輸入血型1");
+        if (bld1 == null) {
+            //是否按了取消
             document.write("您按了取消");
-        } else if (bld == ""){
-            document.write("您尚未填寫");
-        } else if (bld == "a" || bld == "A"){
-            document.write("A型");
-        } else if (bld == "b" || bld == "B"){
-            document.write("B型");
-        } else if (bld == "o" || bld == "O"){
-            document.write("O型");
-        } else if (bld == "ab" || bld == "AB"){
-            document.write("AB型");
         } else {
-            document.write("血型輸入錯誤");
+            bld1 = bld1.trim();
+            if (bld1 == "") {
+                document.write("您尚未填寫");
+            } else if (bld1 == "A" || bld1 == "a") {
+                document.write("A型");
+            } else if (bld1 == "B" || bld1 == "b") {
+                document.write("B型");
+            } else if (bld1 == "O" || bld1 == "o") {
+                document.write("O型");
+            } else if (bld1 == "AB" || bld1 == "ab" || bld1 == "Ab" || bld1 == "aB") {
+                document.write("AB型");
+            } else {
+                document.write("血型輸入錯誤");
+            }
+        }
+
+        document.write('<br/>');
+
+        // 使用 變數名.toUpperCase() 轉大寫
+
+        let bld2 = window.prompt("請輸入血型2");
+        if (bld2 == null) {
+            //是否按了取消
+            document.write("您按了取消");
+        } else {
+            bld2 = bld2.trim().toUpperCase(); //轉大寫
+            if (bld2 == "") {
+                document.write("您尚未填寫");
+            } else if (bld2 == "A") {
+                document.write("A型");
+            } else if (bld2 == "B") {
+                document.write("B型");
+            } else if (bld2 == "O") {
+                document.write("O型");
+            } else if (bld2 == "AB") {
+                document.write("AB型");
+            } else {
+                document.write("血型輸入錯誤");
+            }
+        }
+
+        document.write('<br/>');
+
+        // switch
+
+        let bld3 = prompt("請輸入血型3")
+        if (bld3 == null) {
+            document.write("您按了取消");
+        } else {
+            switch (bld3.trim()) {
+                case '':  //是否按了取消
+                    document.write("您尚未填寫");
+                    break;
+                case 'A':
+                case 'a':
+                    document.write('A型')
+                    break;
+                case 'B':
+                case 'b':
+                    document.write('B型')
+                    break;
+                case 'O':
+                case 'o':
+                    document.write('O型')
+                    break;
+                case 'AB':
+                case 'Ab':
+                case 'aB':
+                case 'ab':
+                    document.write('AB型')
+                    break;
+                default:  //以上皆非
+                    document.write('血型輸入錯誤')
+            }
+        }
+
+        document.write('<br/>');
+
+        let bld4 = prompt("請輸入血型3")
+        if (bld4 == null) {
+            document.write("您按了取消");
+        } else {
+            switch (bld4.trim().toUpperCase()) {
+                case '':  //是否按了取消
+                    document.write("您尚未填寫");
+                    break;
+                case 'A':
+                    document.write('A型')
+                    break;
+                case 'B':
+                    document.write('B型')
+                    break;
+                case 'O':
+                    document.write('O型')
+                    break;
+                case 'AB':
+                    document.write('AB型')
+                    break;
+                default:  //以上皆非
+                    document.write('血型輸入錯誤')
+            }
         }
     </script>
 </body>
