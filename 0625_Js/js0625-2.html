@@ -18,21 +18,21 @@
 
         // 使用 變數名.trim() 去除空白
 
-        let bld1 = prompt("請輸入血型1");
-        if (bld1 == null) {
+        let blood1 = prompt("請輸入血型1");
+        if (blood1 == null) {
             //是否按了取消
             document.write("您按了取消");
         } else {
-            bld1 = bld1.trim();
-            if (bld1 == "") {
+            blood1 = blood1.trim();
+            if (blood1 == "") {
                 document.write("您尚未填寫");
-            } else if (bld1 == "A" || bld1 == "a") {
+            } else if (blood1 == "A" || blood1 == "a") {
                 document.write("A型");
-            } else if (bld1 == "B" || bld1 == "b") {
+            } else if (blood1 == "B" || blood1 == "b") {
                 document.write("B型");
-            } else if (bld1 == "O" || bld1 == "o") {
+            } else if (blood1 == "O" || blood1 == "o") {
                 document.write("O型");
-            } else if (bld1 == "AB" || bld1 == "ab" || bld1 == "Ab" || bld1 == "aB") {
+            } else if (blood1 == "AB" || blood1 == "ab" || blood1 == "Ab" || blood1 == "aB") {
                 document.write("AB型");
             } else {
                 document.write("血型輸入錯誤");
@@ -43,21 +43,21 @@
 
         // 使用 變數名.toUpperCase() 轉大寫
 
-        let bld2 = window.prompt("請輸入血型2");
-        if (bld2 == null) {
+        let blood2 = window.prompt("請輸入血型2");
+        if (blood2 == null) {
             //是否按了取消
             document.write("您按了取消");
         } else {
-            bld2 = bld2.trim().toUpperCase(); //轉大寫
-            if (bld2 == "") {
+            blood2 = blood2.trim().toUpperCase(); //轉大寫
+            if (blood2 == "") {
                 document.write("您尚未填寫");
-            } else if (bld2 == "A") {
+            } else if (blood2 == "A") {
                 document.write("A型");
-            } else if (bld2 == "B") {
+            } else if (blood2 == "B") {
                 document.write("B型");
-            } else if (bld2 == "O") {
+            } else if (blood2 == "O") {
                 document.write("O型");
-            } else if (bld2 == "AB") {
+            } else if (blood2 == "AB") {
                 document.write("AB型");
             } else {
                 document.write("血型輸入錯誤");
@@ -68,11 +68,11 @@
 
         // switch
 
-        let bld3 = prompt("請輸入血型3")
-        if (bld3 == null) {
+        let blood3 = prompt("請輸入血型3")
+        if (blood3 == null) {
             document.write("您按了取消");
         } else {
-            switch (bld3.trim()) {
+            switch (blood3.trim()) {
                 case '':  //是否按了取消
                     document.write("您尚未填寫");
                     break;
@@ -101,11 +101,11 @@
 
         document.write('<br/>');
 
-        let bld4 = prompt("請輸入血型3")
-        if (bld4 == null) {
+        let blood4 = prompt("請輸入血型3")
+        if (blood4 == null) {
             document.write("您按了取消");
         } else {
-            switch (bld4.trim().toUpperCase()) {
+            switch (blood4.trim().toUpperCase()) {
                 case '':  //是否按了取消
                     document.write("您尚未填寫");
                     break;
