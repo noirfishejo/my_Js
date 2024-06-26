@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ex7:
+        // 彈出輸入視窗 => prompt()
+        // 輸入運算起始值 => 1
+        // 輸入運算結束值 => 10
+        // 算出奇數和 => 25
+        // 算出偶數和 => 30
+
+        // let input1 = prompt('輸入起始值');
+        // let input2 = prompt('輸入結束值');
+        // tot1 = 0;
+        // tot2 = 0;
+        // for (i = Number(input1); i <= Number(input2); i++) {
+        //     if (i % 2 === 1) {
+        //         tot1 = tot1 + i;
+        //     } else if (i % 2 === 0) {
+        //         tot2 = tot2 + i;
+        //     }
+        // }
+        // document.write(`奇數和為:${tot1}<br>`);
+        // document.write(`偶數和為:${tot2}<br>`);
+
+        // 狀況1:起始值>結束值
+        // 狀況2:起始值<結束值
+        
+        // let sNum = Number(sNum('起始值'));
+        let sNum = prompt('起始值');
+        sNum = Number(sNum);
+        let eNum = prompt('結束值');
+        eNum = Number(eNum);
+
+        // 處理狀況2:起始值<結束值
+        // 
+        let 
+
+        // 奇數和
+        let tot1 = 0;
+        // 偶數和
+        let tot2 = 0;
+
+        for (let i = sNum; i <= eNum; i++) {
+            // 奇數
+            if (i % 2 === 1) {
+                tot1 = tot1 + i;
+            // 偶數
+            } else {
+                tot2 = tot2 + i;
+            }
+        }
+
+        console.log(`${sNum}-${eNum}的奇數和為:${tot1}`);
+        console.log(`${sNum}-${eNum}的偶數和為:${tot2}`);
+
+
+
+        
+    </script>
+</body>
+
+</html>
