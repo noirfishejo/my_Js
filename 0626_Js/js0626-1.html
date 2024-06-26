@@ -21,6 +21,13 @@
         // 參數2:執行迴圈的條件
         // 參數3:每次執行迴圈後,計數器變數的增減值
 
+        let s = 0;
+        let i;
+        for (let i = 1; i <= 10; i++) {
+            s = s + i;
+        }
+        console.log('1 + 2 + 3 + ... + 10 = ' + s);
+
         // ex1: 顯示連續 5 次 Hello
         document.write('Hello<br>');
         document.write('Hello<br>');
@@ -54,15 +61,67 @@
             document.write(a + ',');
             a++;
         }
+        document.write('<hr>');
 
-
-
-        let s = 0;
-        let i;
-        for (let i = 1; i <= 10; i++) {
-            s = s + i;
+        // 寫法四
+        let b = 9
+        for (let i = 1; i <= 6; i++) {
+            document.write((b = b + 1) + ',');
         }
-        console.log('1 + 2 + 3 + ... + 10 = ' + s);
+        document.write('<hr>');
+
+        // 寫法五
+        let c = 10
+        for (let i = 1; i <= 6; i++) {
+            document.write(c++ + ',');
+            // c++ => 先顯示,再加1
+            // ++c => 先加1,再顯示
+        }
+        document.write('<hr>');
+
+        // 寫法六
+        let d = 9
+        for (let i = 1; i <= 6; i++) {
+            document.write(++d + ',');
+        }
+        document.write('<hr>');
+
+        // 遞增遞減運算值
+
+
+        // ex3:顯示1-10的奇數,用空白隔開
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 == 1) {
+                document.write(i + ' ');
+            }
+        }
+        document.write('<hr>');
+
+        // ex4:顯示1-10的偶數,用逗號隔開,但最後一個逗號取消
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) {
+                // 先顯示值
+                document.write(i);
+                // 再檢查不是最後一個值的時候顯示逗號
+                if (i != 10) {
+                    document.write(',');
+                }
+            }
+        }
+        document.write('<hr>');
+
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) {
+                // 先檢查是否為最後一個值,不是的話顯示逗號
+                if (i != 10) {
+                    document.write(i + ',');
+                } else {
+                    // 最後一個值不顯示逗號
+                    document.write(i);
+                }
+            }
+        }
+        document.write('<hr>');
     </script>
 </body>
 
