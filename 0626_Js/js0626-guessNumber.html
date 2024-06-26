@@ -9,18 +9,18 @@
 
 <body>
     <script>
-
-
         for (let i = 1; i <= 3; i++) {
             let result = Number(prompt('猜數字1-99'));
-
             if (result === 99) {
                 document.write('答對了');
                 break;
-            } else if (result != 99) {
+            } else if (i<=2){
+                result != 99
                 document.write(`第${i}次:${result}<br>`);
+                } else {
+                    document.write(`第${i}次:${result}<br>挑戰失敗`);
                 }
-                document.write('挑戰失敗<br>');
+                
             }
 
 
