@@ -30,23 +30,31 @@
         // document.write(`奇數和為:${tot1}<br>`);
         // document.write(`偶數和為:${tot2}<br>`);
 
-        // 狀況1:起始值>結束值
-        // 狀況2:起始值<結束值
-        
+        // 狀況1:起始值<結束值
+        // 狀況2:起始值>結束值
+
         // let sNum = Number(sNum('起始值'));
         let sNum = prompt('起始值');
         sNum = Number(sNum);
         let eNum = prompt('結束值');
         eNum = Number(eNum);
 
-        // 處理狀況2:起始值<結束值
-        // 
-        let 
+
+        // 處理狀況2:起始值>結束值
+        // 調換
+        if (sNum > eNum) {
+            let tmp = sNum;  // 大的暫時給tmp
+            sNum = eNum;     // 小的給sNum
+            eNum = tmp;      // 大的給eNum
+        }
+
 
         // 奇數和
         let tot1 = 0;
         // 偶數和
         let tot2 = 0;
+        // let tot1 = 0, tot2 = 0;
+
 
         for (let i = sNum; i <= eNum; i++) {
             // 奇數
@@ -61,9 +69,6 @@
         console.log(`${sNum}-${eNum}的奇數和為:${tot1}`);
         console.log(`${sNum}-${eNum}的偶數和為:${tot2}`);
 
-
-
-        
     </script>
 </body>
 
