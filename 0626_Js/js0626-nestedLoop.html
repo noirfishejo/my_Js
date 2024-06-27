@@ -11,18 +11,27 @@
     <script>
         // 巢狀迴圈
 
+        // for (let i = 1; i <= 5; i++) {
+        //     if (i == 1) {
+        //         document.write('*<br>');
+        //     } else if (i == 2) {
+        //         document.write('**<br>');
+        //     } else if (i == 3) {
+        //         document.write('***<br>');
+        //     } else if (i == 4) {
+        //         document.write('****<br>');
+        //     } else {
+        //         document.write('*****<br>');
+        //     }
+        // }
+
+        
         for (let i = 1; i <= 5; i++) {
-            if (i == 1) {
-                document.write('*<br>');
-            } else if (i == 2) {
-                document.write('**<br>');
-            } else if (i == 3) {
-                document.write('***<br>');
-            } else if (i == 4) {
-                document.write('****<br>');
-            } else {
-                document.write('*****<br>');
+            let a = '';
+            for (let j = 1; j <= i; j++) {
+                a = a + '*';
             }
+            document.write(a + '<br>');
         }
     </script>
 </body>
