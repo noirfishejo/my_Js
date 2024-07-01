@@ -11,7 +11,7 @@
     <script>
         // 巢狀迴圈
 
-        
+
         for (let i = 1; i <= 5; i++) {
             let a = '';
             for (let j = 1; j <= i; j++) {
@@ -19,6 +19,24 @@
             }
             document.write(a + '<br>');
         }
+
+        // 撰寫迴圈要避免無窮迴圈(無法結束的迴圈)
+        // 方法一
+        // for (let i = 5; i >= 1; i--) {
+        //     for (let j = 1; j <= i; j++) {
+        //         document.write('*');
+        //     }
+        //     document.write('<br>');
+        // }
+        // // 方法二
+        // document.write('<br>');
+        // for (let i = 1; i <= 5; i++) {
+        //     for (let j = 5; j >= i; j--) {
+        //         document.write('*');
+        //     }
+        //     document.write('<br>');
+        // }
+
     </script>
 </body>
 
