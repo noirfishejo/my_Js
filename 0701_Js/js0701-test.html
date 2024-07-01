@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 請顯示1-100中,5的倍數加總
+        // 直到合計大於50就結束迴圈
+
+        // i=5 , s=5
+        // i=10, s=15
+        // i=15, s=30
+        // i=20, s=50
+        // i=25, s=75
+
+        // for 迴圈
+        document.write('for 迴圈<br>')
+        let tot = 0;
+        for (let i = 1; i <= 100; i++)
+            if (i % 5 == 0) {
+                tot = tot + i;
+                document.write(`i=${i}, tot=${tot}<br>`)
+                if (tot > 50) {
+                    break;
+                }
+            }
+        document.write('<hr>')
+
+        // while 迴圈
+        document.write('while 迴圈<br>')
+        tot = 0;  //沿用for迴圈變數,所以t0t變數要先歸零
+        let i = 1;
+        while (i <= 100) {
+            if (i % 5 == 0) {
+                tot += i;
+                document.write(`i=${i}, tot=${tot}<br>`);
+                if (tot > 50) {
+                    break;
+                }
+            }
+            i++;
+        }
+        document.write('<hr>')
+
+
+
+
+    </script>
+</body>
+
+</html>
