@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        // 函式宣告狀況一 : 無參數, 無回傳值
+
+        // 建立一個打招呼的函式
+        function sayHi() {
+            alert('Hello');
+            document.write('Hello<br>');
+            console.log('Hello');
+        }
+        // 呼叫函式 => 函式名稱()
+        sayHi();
+
+        // 函式宣告狀況二 : 有參數, 無回傳值
+
+        function sayHi2(strName) {
+            document.write('Hi,'+strName+'早安<br>');
+        }
+        // sayHi2('test');
+        // sayHi2('123');
+
+        // 彈出視窗, 輸入稱呼
+        let imputName = prompt('請問如何稱呼');
+        sayHi2(imputName);
+    </script>
 </body>
+
 </html>
