@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 請輸入成績N次,直到輸入-1或取消就結束
+        /* 
+        第1次分數:90
+        第2次分數:50
+        第3次分數:60
+        第4次分數:-1
+        -----------
+        及格人數:2人
+        不及格人數:1人
+        總分:200分
+        總平均:66.67分
+        */
+
+
+
+
+        let count = 0;
+        let pass = 0;
+        let fail = 0;
+        let tot = 0;
+        let avg = 0;
+
+        while (true) {
+            let score = prompt('輸入成績');
+            // 　是否輸入-1或按了取消
+            if (score == '-1' || score == null) {
+                break;
+            }
+            // 是否非數字
+            if (isNaN(score)) {
+                alert('非數值，請重新輸入')
+                continue;   // 如果非數字，則不再往下執行，回到迴圈開始時，重新輸入
+            }
+            score = Number(score);
+            // 分數是否為有效範圍 => 0-100
+            if (score<0 || score>100){
+                alert('err! 分數非有效範圍 => 0-100, 請重新輸入')
+            }
+
+
+            if (score >= 60) {
+                pass++; // 及格人數累計
+            } else {
+                fail++; // 不及格人數累計
+            }
+            // 總分累計
+            tot = tot + score;
+            count++; //執行N次
+            document.write(`第${count}次成績:${score}分<br>`);
+        }
+
+        console.log('結束計算');
+        document.write('<hr>');
+        document.write(`及格人數:${pass}<br>`);
+        document.write(`不及格人數:${fail}<br>`);
+        document.write(`總分:${tot}分<br>`);
+        avg = tot / (pass + fail);    // 求平均
+        avg = avg.toFixed(2);       // 取小數點到第二位
+        document.write(`總平均:${avg}分`);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 有參數, 有傳回值
+        function chkScore(intScore) {
+            if (intScore >= 60) {
+                // document.write('pass');
+                return 'pass';  // 結束函式, 並把結果傳出去
+            } else {
+                // document.write('fail');
+                return 'fail';
+            }
+        }
+
+        // let score = 90;
+        let score = Number(prompt('enter your score:'));
+        let result = chkScore(score);
+        document.write('score1:'+ result);
+
+    </script>
+</body>
+
+</html>
