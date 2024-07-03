@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 猜數字：直到猜對才結束
+        // 用亂數產生一個值：60
+        // 輸入資訊顯示console.log()
+        // 第1次：50 => 太小了（提示：50-100）
+        // 第2次：90 => 太大了（提示：50-90）
+        // 第3次：80 => 太大了（提示：50-80）
+        // 第4次：55 => 太小了（提示：55-80）
+        // 第5次：60 => 猜對了
+
+
+        // console.log(Math.floor(Math.random()*100)); // 回傳 0 ~ 99
+        // console.log(Math.floor(Math.random()*100)+1); // 回傳 1 ~ 100
+        // 產生亂數給變數bingoNum
+        let bingoNum = Math.floor(Math.random() * 100) + 1;
+        console.log(bingoNum);
+
+        let count = 0;
+        let bigNum = 100;
+        let smlNum = 1;
+        while (true) {
+            let intNum = prompt('猜數字1-100');
+            count++;
+            if (intNum == null) {
+                alert('不准取消！猜完！');
+                continue;
+            } else if (isNaN(intNum)) {
+                alert('非數值，請重新輸入');
+                continue;
+            }
+            intNum = Number(intNum);
+            if (intNum < 1 || intNum > 100) {
+                alert('err! 分數非有效範圍 => 1-100, 請重新輸入');
+                continue;
+            }
+            
+            if (intNum == bingoNum) {
+                console.log(`第${count}次：${intNum}猜對了！`);
+                document.write('可喜可賀！')
+                break;
+            } else if (intNum > bingoNum) {
+                bigNum = intNum;
+                console.log(`第${count}次：${intNum}太大了！`);
+                alert(`提示：${smlNum}-${bigNum}`);
+                continue;
+            } else if (intNum < bingoNum) {
+                smlNum = intNum;
+                console.log(`第${count}次：${intNum}太小了！`);
+                alert(`提示：${smlNum}-${bigNum}`);
+                continue;
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>
