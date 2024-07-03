@@ -54,12 +54,14 @@
         do {
             if (i % 5 === 0) {
                 tot += i;
-                document.write(`i${i}, tot=${tot}<br>`);
+                document.write(`i=${i}, tot=${tot}<br>`);
                 if (tot > 50) {
                     break;
                 }
             }
-        }
+            i++;
+        } while (i <= 100);
+
 
 
 

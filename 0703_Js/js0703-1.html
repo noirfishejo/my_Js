@@ -9,6 +9,10 @@
 
 <body>
     <script>
+        // 結論
+        // break    => 結束迴圈或者 switch
+        // continue => 回到迴圈開始的位置
+
         // 使用 continue (忽略下方程式執行)
         // 當程式遇到 continue 時
         // continue 之後的程式碼都不執行
@@ -18,12 +22,42 @@
 
         // for 迴圈
         let tot = 0;
+        let i = 0;
         for (let i = 0; i <= 100; i++) {
             if (i % 5 != 0) {
                 continue;
             }
             tot = tot + i;
         }
+        console.log('for 迴圈');
+        console.log(`1-100 中 5 的倍數和 = ${tot}`);
+
+        // while 迴圈
+        tot = 0;
+        i = 0;
+        while (i <= 100) {
+            i++;
+            if (i % 5 != 0) {
+                continue;
+            }
+            tot = tot + i;
+        }
+        console.log('while 迴圈');
+        console.log(`1-100 中 5 的倍數和 = ${tot}`);
+
+        // do while 迴圈
+        tot = 0;
+        i = 0;
+        do {
+            i++;
+            if (i % 5 != 0) {
+                continue;
+            }
+            tot = tot + i;
+        }
+        while (i <= 100);
+        console.log('do while 迴圈');
+        console.log(`1-100 中 5 的倍數和 = ${tot}`);
     </script>
 </body>
 
