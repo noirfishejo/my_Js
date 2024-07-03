@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 使用 continue (忽略下方程式執行)
+        // 當程式遇到 continue 時
+        // continue 之後的程式碼都不執行
+        // 直接回到迴圈起始位置
+
+        // 1-100 中 5 的倍數和
+
+        // for 迴圈
+        let tot = 0;
+        for (let i = 0; i <= 100; i++) {
+            if (i % 5 != 0) {
+                continue;
+            }
+            tot = tot + i;
+        }
+    </script>
+</body>
+
+</html>

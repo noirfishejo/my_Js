@@ -47,6 +47,19 @@
         }
         document.write('<hr>')
 
+        // do while 迴圈
+        document.write('do while 迴圈<br>');
+        tot = 0;
+        i = 1;
+        do {
+            if (i % 5 === 0) {
+                tot += i;
+                document.write(`i${i}, tot=${tot}<br>`);
+                if (tot > 50) {
+                    break;
+                }
+            }
+        }
 
 
 
