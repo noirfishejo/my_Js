@@ -11,19 +11,19 @@
     <script>
         // 只顯示奇數
         // 方法一
-        // let arr1 = [1, 3, 7, 100, 234];
-        // for(let i = 0; i < arr1.length; i++){
-        //     if(arr1[i] % 2 == 1){
-        //         console.log(i);
-        //     }
-        // }
+        let arr1 = [1, 3, 7, 100, 234];
+        for(let i = 0; i < arr1.length; i++){
+            if(arr1[i] % 2 == 1){
+                console.log(arr1[i]);
+            }
+        }
         // console.log(`arr1:${arr1}`);
 
         // 方法二
         // 陣列中只保留奇數 => filter
-        let arr1 = [1, 3, 7, 100, 234];
-        console.log('原陣列內容:');
-        console.log(arr1);
+        // let arr1 = [1, 3, 7, 100, 234];
+        // console.log('原陣列內容:');
+        // console.log(arr1);
         // CallbackFn => 匿名函式
         // let odds = arr2.filter(function (n) {
         //     if (n % 2 == 1) {
@@ -34,25 +34,28 @@
 
         // CallbackFn => 箭頭函式
         // const 為常數，不會改變原來的值 => 也可以用let啦
-        const odds = arr1.filter((n) => {
-            // 檢查是否為奇數
-            if (n % 2 == 1) {
-                return true;
-            }
-            return false;
-        });
+        // const odds = arr1.filter((n) => {
+        //     // 檢查是否為奇數
+        //     if (n % 2 == 1) {
+        //         return true;
+        //     }
+        //     return false;
+        // });
 
         // 簡化寫法
         // let odds = arr1.filter((n) => {
         //     return n % 2 == 1;   // n=1 => 1%2==1 => true
         // });
+        
+        // 再簡化寫法
+        // let odds = arr1.filter((n) => n % 2 == 1);
 
-        console.log('篩選後的奇數內容:');
-        console.log(odds);
-        console.log('odds資料型別:');
-        console.log(typeof(odds));
-        console.log('篩選後的原陣列內容:');  // 原陣列內容不變，只是經過篩選
-        console.log(arr1);  // 原陣列內容不變，只是經過篩選
+        // console.log('篩選後的奇數內容:');
+        // console.log(odds);
+        // console.log('odds資料型別:');
+        // console.log(typeof(odds));
+        // console.log('篩選後的原陣列內容:');  // 原陣列內容不變，只是經過篩選
+        // console.log(arr1);  // 原陣列內容不變，只是經過篩選
 
         // Callback 函式 (Callback function)
         // https://medium.com/appxtech/%E4%BB%80%E9%BA%BC%E6%98%AFcallback%E5%87%BD%E5%BC%8F-callback-function-3a0a972d5f82

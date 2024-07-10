@@ -1,13 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // 陣列的使用時機
+        // 建立每個學生的座號
+        // 使用陣列
+        // let sNo = [1,2,3,...,30];
+        // 使用變數30個
+        // let sNo1 = 1;
+        // let sNo2 = 2;
+        // let sNo3 = 3;
+        // let sNo4 = 4;
+        // let sNo5 = 5;
+        // // ...
+        // let sNo30 = 30;
+
+        // 陣列中找出超過100以上的資料 => filter
+        let arr1 = [1, 3, 7, 100, 234];
+
+        // for 
+        console.log('--- for ---');
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] >= 100) {
+                console.log(arr1[i]);
+            }
+        }
+
+        // while
+        console.log('--- while ---');
+        let count = 0;
+        while (count < arr1.length) {
+            if (arr1[count] >= 100) {
+                console.log(arr1[count]);
+            }
+            count++;
+        }
+
+        // do while
+        console.log('--- do while ---');
+        count = 0;
+        do {
+            if (arr1[count] >= 100) {
+                console.log(arr1[count]);
+            }
+            count++;
+        }
+        while (count < arr1.length) {
+        }
+
+        // filter()
+        console.log('--- filter() ---');
+        let greaterThan1001 = arr1.filter(function (n) {
+            if (n >= 100) {
+                return true;
+            }
+            return false;
+        });
+        console.log(greaterThan1001);
+
+        console.log('--- 箭頭函式 ---');
+        let greaterThan1002 = arr1.filter((n) => {
+            if (n >= 100) {
+                return true;
+            }
+            return false;
+        });
+        console.log(greaterThan1002);
+
+        console.log('--- 簡化 ---');
+        let greaterThan1003 = arr1.filter((n) => n >= 100);
+        console.log(greaterThan1003);
+
     </script>
 </body>
+
 </html>
