@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 顯示陣列中所有值
+        let arr = [1, 2, 3, 4, 5, '12345'];
+
+        // for => 結果會呈現一般型態
+        console.log('---for---');
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        // for of
+        console.log('---for of---');
+        // for(let 變數名稱 of 陣列名稱)
+        for (let n of arr) {
+            console.log(n);
+        }
+
+        // forEach => 陣列才會用到，
+        console.log('---forEach---');
+        arr.forEach((n) => {
+            console.log(n);
+        });
+
+        // map => 結果會呈現陣列型態
+        console.log('---map---');
+        let arrMapAllData = arr.map((n) => {
+            return n;
+        });
+        console.log(arrMapAllData);
+
+
+        //  顯示陣列中所有的值
+        const arr1 = [1, 2, 3, 4, 5, "12345"];
+        // typeof() => 檢查資料型別 => 字串型別 => string
+
+        // for
+        console.log('---for---');
+        for (let i = 0; i < arr1.length; i++) {
+            if (typeof (arr1[i]) === "string") {
+                console.log(arr1[i]);
+            }
+        }
+
+        // for of
+        console.log('---for of---');
+        for (let n of arr1) {
+            if (typeof (n) === "string") {
+                console.log(n);
+            }
+        }
+
+        // forEach
+        console.log('---forEach---');
+        arr1.forEach((n) => {
+            if (typeof (n) === "string") {
+                console.log(n);
+            }
+        });
+
+        // map
+        console.log('---map---');
+        arr1.map((n) => {
+            if (typeof (n) === "string") {
+                console.log(n);
+            }
+        });
+
+</script>
+</body>
+
+</html>
