@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [100, 30, 99, 10, 3];
+        console.log('排序前:' + arr1);
+        // 遞增排序
+        // arr1.sort();
+        // console.log('排序後:' + arr1); => 會按數字順序排列，不管是幾位數
+        // 使用帶有參數的sort，前提是來源未排序 
+
+        arr1.sort((a, b) => {
+            return a - b; // 遞增
+        });
+        console.log('遞增排序後:' + arr1);
+        
+        arr1.reverse(); // 反轉
+        console.log('遞減排序後:' + arr1);
+        
+        // arr1.sort((a, b) => {
+        //     return b - a; // 遞減
+        // });
+        // console.log('遞減排序後:' + arr1);
+        // arr1.reverse();
+        // console.log(arr1);
+
+
+    </script>
+</body>
+
+</html>

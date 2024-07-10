@@ -11,6 +11,7 @@
     <script>
         // 建立陣列方法1
         let arr1 = [1, 2, 3, 4, 5];
+        console.log(arr1[5]);
         console.log(`arr1:${arr1}`);
 
         // 建立陣列方法2: 先建立陣列物件，再給值
@@ -33,16 +34,18 @@
         let arr5 = [1, 2, 3];
         let arr6 = ['a', 'b', 'c'];
         let arr7 = [1, '2', true, [], { book: 'javascript' }];
+        // 物件
         let obj1={
             x:5,
-            y:3
+            y:'3'
         }
 
         // 陣列型別 => typeof 陣列名稱
         console.log(typeof (123));
         console.log(typeof ('123'));
         console.log(typeof (arr5));
-        console.log(typeof (obj1));
+        console.log(typeof (obj1.x));
+        console.log(typeof (arr6[1]));
 
     </script>
 </body>
