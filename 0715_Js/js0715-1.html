@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // // 取亂數 => 0-1 之間
+        // let r1 = Math.random();
+        // console.log(r1);
+
+        // // console.log(Math.random());    /* 新亂數，不會改變 r1 */
+        // // console.log(r1);    /* r1 已儲存先前的亂數，不會更新 */
+
+        // // 取小數二位
+
+        // // 方法一
+        // /* 使用 toFixed 取出來的是字串
+        // 使用 Number 轉成數值時，會四捨五入進位
+        // 會保存保存小數點的資料 */
+        // console.log(Number(r1.toFixed(2)));
+
+        // /* 使用 parseInt 不會保存小數點的資料 */
+        // console.log(parseInt(r1.toFixed(2)));
+
+        // // 方法二
+        // // 1. 先乘 100
+        // console.log(r1*100);
+        // // 2. 去除多餘的小數
+        // /* 無條件捨去取整數，不會進位 */
+        // console.log(Math.floor(r1*100));    
+        // // 3.除以 100
+        // /* 變回小數二位 */
+        // console.log(Math.floor(r1*100)/100);
+
+        // 找出亂數 1-5 任一值
+        // let r2 = Math.random();
+        // console.log(r2);
+        // console.log(r2 * 5);
+        // console.log((r2 * 5) + 1);
+        // console.log('亂數值:' + (Math.floor(r2 * 5) + 1));
+        
+        // 簡化為
+        let r2 = Math.floor(Math.random() * 5) + 1;
+        console.log('亂數值:' + r2);
+
+        // 宣告一個陣列
+        let arr1 = [1, 100, 50, 3, 5];
+
+        // 尋找陣列中是否存在
+        // 方法一: indexOf(item)
+        // 存在 => 傳回第一次出現的陣列編號
+        // 不存在 => -1
+        // let result = arr1.indexOf(Math.floor(r2 * 5) + 1);
+        let result = arr1.indexOf(r2);
+        console.log('indexOf-> 陣列中的編號為:' + result);
+
+        // 陣列中若沒有找到亂數值，加入陣列 push()
+        if (result == -1) {
+            // arr1.push(Math.floor(r2 * 5) + 1);
+            arr1.push(r2);
+            console.log('新陣列:' + arr1);
+        }
+
+        // 方法二: includes(item)
+        // 存在 => true
+        // 不存在 => false
+        // let result2 = arr1.includes(Math.floor(r2 * 5) + 1);
+        let result2 = arr1.includes(r2);
+        console.log('includes-> 陣列中的編號為:' + result2);
+
+        // 陣列中若沒有找到亂數值，加入陣列 push()
+        if (result2 == false) {
+            // arr1.push(Math.floor(r2 * 5) + 1);
+            arr1.push(r2);
+            console.log('新陣列:' + arr1);
+        }
+
+
+
+        // 
+
+
+
+    </script>
+</body>
+
+</html>

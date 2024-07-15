@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 亂數產生大樂透號碼(不重覆) => 1-49 共6個號碼不重複遞增排序
+        特別號 => 1個號碼可重複 */
+
+        let r2 = Math.floor(Math.random() * 49) + 1;
+        let arr1 = [];
+        let r1 = 0;
+        let result = arr1.indexOf(r1);
+        console.log(r1);
+        while (true) {
+            r1 = Math.floor(Math.random() * 49) + 1;
+            if ( arr1.length == 6) {
+                break;
+            } 
+            if (result == -1){
+                arr1.push(r1);
+            }
+        }
+        arr1.sort((a, b) => {
+            return a - b;
+        });
+        arr1.push(r2);
+        console.log(arr1);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
