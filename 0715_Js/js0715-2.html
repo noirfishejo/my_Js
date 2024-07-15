@@ -15,14 +15,13 @@
         let r2 = Math.floor(Math.random() * 49) + 1;
         let arr1 = [];
         let r1 = 0;
-        let result = arr1.indexOf(r1);
-        console.log(r1);
+
         while (true) {
             r1 = Math.floor(Math.random() * 49) + 1;
             if ( arr1.length == 6) {
                 break;
             } 
-            if (result == -1){
+            if (arr1.indexOf(r1) == -1){
                 arr1.push(r1);
             }
         }
@@ -31,11 +30,6 @@
         });
         arr1.push(r2);
         console.log(arr1);
-
-
-
-
-
     </script>
 
 </body>
