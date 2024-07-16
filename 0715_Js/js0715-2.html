@@ -18,10 +18,10 @@
 
         while (true) {
             r1 = Math.floor(Math.random() * 49) + 1;
-            if ( arr1.length == 6) {
+            if (arr1.length == 6) {
                 break;
-            } 
-            if (arr1.indexOf(r1) == -1){
+            }
+            if (arr1.indexOf(r1) == -1) {
                 arr1.push(r1);
             }
         }
@@ -30,6 +30,58 @@
         });
         arr1.push(r2);
         console.log(arr1);
+
+        /* 講解版 */
+        let arrNum = [];
+
+        // 取大樂透第一區:前6個號碼(1-49)
+        // 方法一 => for
+        // for (let i = 0; i < 6; i++) {
+        // 取亂數
+        //     let lotNum = Math.floor(Math.random()*49) + 1;
+        //     // 檢查陣列中是否已存在此號碼
+        //     if (arrNum.indexOf(lotNum) == -1) {
+        //         // 沒有重複就加入陣列
+        //         arrNum.push(lotNum);
+        //     } else {
+        //         // 已存在此號碼
+        //         console.log(`在編號${i}位置, ${lotNum}重複了`);
+        //         i = i - 1;  // 使用 for 迴圈沒進陣列會讓該編號空值,所以重複時編號位置要扣回來
+        //     }
+        // }
+
+        // 方法二 => while
+        let i = 0;
+        // while(i<6){
+        //     let lotNum = Math.floor(Math.random()*49) + 1;
+        //     if (arrNum.indexOf(lotNum) == -1) {
+        //         arrNum.push(lotNum);
+        //         i++;
+        //     } /* else { 
+        //         console.log(`在編號${i}位置, ${lotNum}重複了`);
+        //     } */
+        // }
+
+        // 方法三 => do-while
+        do {
+            let lotNum = Math.floor(Math.random() * 49) + 1;
+            if (arrNum.indexOf(lotNum) == -1) {
+                arrNum.push(lotNum);
+                i++;
+            }
+        } while (i < 6);
+        console.log('排序前: ' + arrNum);
+
+        arrNum.sort((a, b) => {
+            return a - b;
+        });
+
+        console.log('排序後: ' + arrNum);
+
+        // 取亂數特別號
+        let speNum = Math.floor(Math.random() * 49) + 1;
+        console.log('特別號:' + speNum);
+
     </script>
 
 </body>

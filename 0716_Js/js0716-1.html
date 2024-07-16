@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立函式時機
+        // 被動執行時
+        // function Name(){...}
+        // 立即執行
+        // 匿名函式 => function(){...}
+        // 箭頭函式 => ()=>{...}
+
+        // 建立函式：取亂數
+        function getRandNum() {
+            return Math.floor(Math.random() * 49) + 1;
+        }
+
+        function getRandNum2() {
+            return Math.floor(Math.random() * 38) + 1;
+        }
+
+        function getRandNum3() {
+            return Math.floor(Math.random() * 39) + 1;
+        }
+
+
+        // 大樂透 => 第一區1-49挑6個號碼 + 第二區1-49挑1個號碼
+        // 威力彩 => 第一區1-38挑6個號碼 + 第二區1-8挑1個號碼
+        // 今彩539 => 第一區1-39挑5個號碼
+        function getLotNum(logGameNo) {
+            let arrNum = [];
+            let i = 0;
+            if (logGameNo == 1) {
+                while (i < 6) {
+                    let lotNum = getRandNum();
+                    if (arrNum.indexOf(lotNum) == -1) {
+                        arrNum.push(lotNum);
+                        i++;
+                    }
+                }
+                arrNum.sort((a, b) => {
+                    return a - b;
+                });
+                let speNum = Math.floor(Math.random() * 49) + 1;
+                return console.log(`大樂透:${arrNum}特別號:${speNum}`);
+            }
+            if (logGameNo == 2) {
+                while (i < 6) {
+                    lotNum = getRandNum2();
+                    if (arrNum.indexOf(lotNum) == -1) {
+                        arrNum.push(lotNum);
+                        i++;
+                    }
+                }
+                arrNum.sort((a, b) => {
+                    return a - b;
+                });
+                let speNum2 = Math.floor(Math.random() * 8) + 1;
+                return console.log('威力彩: ' + arrNum + '特別號:' + speNum2);
+            }
+            if (logGameNo == 3) {
+                while (i < 5) {
+                    lotNum = getRandNum3();
+                    if (arrNum.indexOf(lotNum) == -1) {
+                        arrNum.push(lotNum);
+                        i++;
+                    }
+                }
+                arrNum.sort((a, b) => {
+                    return a - b;
+                });
+                return console.log('今彩539: ' + arrNum);
+            }
+        }
+        // 跳脫字元符號 =>\n => 換行
+        let logGameNo = prompt('請輸入樂透號碼代碼 =>\n1.大樂透 2.威力彩 3.今彩539');
+        // 產生大樂透號碼
+        getLotNum(logGameNo);
+
+    </script>
+</body>
+
+</html>

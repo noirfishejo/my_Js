@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立函式時機
+        // 被動執行時
+        // function Name(){...}
+        // 立即執行
+        // 匿名函式 => function(){...}
+        // 箭頭函式 => ()=>{...}
+
+        // 建立函式：取亂數
+        function getRandNum(max) {
+            return Math.floor(Math.random() * max) + 1;
+        }
+
+        // 大樂透 => 第一區1-49挑6個號碼 + 第二區1-49挑1個號碼
+        function getLotNum() {
+            let arrNum = [];
+            let i = 0;
+            while (i < 6) {
+                let lotNum = getRandNum(49);
+                if (arrNum.indexOf(lotNum) == -1) {
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            }
+            console.log('排序前: ' + arrNum);
+            arrNum.sort((a, b) => {
+                return a - b;
+            });
+            console.log('排序後: ' + arrNum);
+            let speNum = getRandNum(49);
+            console.log('特別號: ' + speNum);
+        }
+        // 威力彩 => 第一區1-38挑6個號碼 + 第二區1-8挑1個號碼
+        function getLotNum2() {
+            let arrNum = [];
+            let i = 0;
+            while (i < 6) {
+                lotNum = getRandNum(38);
+                if (arrNum.indexOf(lotNum) == -1) {
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            }
+            console.log('排序前: ' + arrNum);
+            arrNum.sort((a, b) => {
+                return a - b;
+            });
+            console.log('排序後: ' + arrNum);
+            let speNum = getRandNum(8);
+            console.log('特別號: ' + speNum);
+        }
+        // 今彩539 => 第一區1-39挑5個號碼
+        function getLotNum3() {
+            let arrNum = [];
+            let i = 0;
+            while (i < 5) {
+                lotNum = getRandNum(39);
+                if (arrNum.indexOf(lotNum) == -1) {
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            }
+            console.log('排序前: ' + arrNum);
+            arrNum.sort((a, b) => {
+                return a - b;
+            });
+            console.log('排序後: ' + arrNum);
+        }
+
+        // 跳脫字元符號 =>\n => 換行
+        let logGameNo = prompt('請輸入樂透號碼代碼 =>\n1.大樂透 2.威力彩 3.今彩539');
+
+        switch (logGameNo) {
+            case '1':
+                getLotNum();
+                break;
+            case '2':
+                getLotNum2();
+                break;
+            case '3':
+                getLotNum3();
+                break;
+            case '':
+                console.log('輸入錯誤');
+                break;
+        }
+
+
+    </script>
+</body>
+
+</html>
