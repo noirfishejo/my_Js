@@ -38,30 +38,30 @@
             }
         }
         let lotGameNo = prompt('請輸入樂透號碼代碼 =>\n1.大樂透 2.威力彩 3.今彩539');
-        // if (lotGameNo == '1') {
-        //     getLotNum('1', 6, 49, 49);
-        // } else if (lotGameNo == '2') {
-        //     getLotNum('2', 6, 38, 8);
-        // } else if (lotGameNo == '3') {
-        //     getLotNum('3', 5, 39);
-        // } else {
-        //     console.log('輸入錯誤');
-        // }
-
-        switch (lotGameNo) {
-            case '1':
-                getLotNum('1',6,49,49);
-                break;
-            case '2':
-                getLotNum('2',6,38,8);
-                break;
-            case '3':
-                getLotNum('3',5,39);
-                break;
-            default:
-                console.log('輸入錯誤');
-                break;
+        if (lotGameNo == '1') {
+            getLotNum('1', 6, 49, 49);
+        } else if (lotGameNo == '2') {
+            getLotNum('2', 6, 38, 8);
+        } else if (lotGameNo == '3') {
+            getLotNum('3', 5, 39);
+        } else {
+            console.log('輸入錯誤');
         }
+
+        // switch (lotGameNo) {
+        //     case '1':
+        //         getLotNum('1',6,49,49);
+        //         break;
+        //     case '2':
+        //         getLotNum('2',6,38,8);
+        //         break;
+        //     case '3':
+        //         getLotNum('3',5,39);
+        //         break;
+        //     default:
+        //         console.log('輸入錯誤');
+        //         break;
+        // }
     </script>
 </body>
 
