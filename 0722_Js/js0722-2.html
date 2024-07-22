@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立物件樣板
+        // 習慣上物件樣板名稱字首為大寫，以區隔樣板跟一般function
+        // 1. 建立物件樣板成員(類比成figma元件的概念)
+        function Sdata(no, name, htmlScore, cssScore, jsScore, ...other) {
+            // this 代表此物件
+            this.sid = no;
+            this.sName = name;
+            this.html = htmlScore;
+            this.css = cssScore;
+            this.javascript = jsScore;
+            this.showData = function () {
+                console.log(`${this.sid}號${this.sName}同學，成績總分為${this.html + this.css + this.javascript}分`);
+                console.log(`身高:${other[0]},體重:${other[1]}`);
+            }
+        }
+        // 2. 使用物件樣板
+        // 傳值給物件樣板的參數
+        let s1 = new Sdata('s001', '睿', 100, 100, 100, 170, 50);
+        // 呼叫物件樣板中的方法
+        s1.showData();
+
+        let s2 = new Sdata('s002', '三三', 99, 99, 99, '沒有身高', 49);
+        s2.showData();
+
+        let s3 = new Sdata('s003', '欣怡', 99, 99, 98, '沒有身高', '沒有體重');
+        s3.showData();
+
+        // 計算全班各科總分
+        // 方法一:直接使用s1,s2,s3的成員
+        // console.log('Html班級總成績'+(s1.html+s2.html+s3.html));
+        // console.log('Css班級總成績'+(s1.css+s2.css+s3.css));
+        // console.log('Js班級總成績'+(s1.javascript+s2.javascript+s3.javascript));
+
+        console.log('--- 陣列物件 ---');
+
+        // 方法二:陣列物件
+        // 宣告陣列
+        let arrObj = [s1, s2, s3];
+        // let totHtml = 0;
+        // let totCss = 0;
+        // let totJs = 0;
+
+        let totHtml = 0, totCss = 0, totJs = 0;
+
+        for (let i = 0; i < arrObj.length; i++) {
+            totHtml += arrObj[i].html;
+            totCss += arrObj[i].css;
+            totJs += arrObj[i].javascript;
+        }
+        console.log('Html總分' + totHtml);
+        console.log('Css總分' + totCss);
+        console.log('Js總分' + totJs);
+
+
+
+    </script>
+</body>
+
+</html>

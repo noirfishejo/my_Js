@@ -1,0 +1,22 @@
+物件Object
+- 用來封裝其他資料的容器
+
+物件的使用流程
+- 建立物件
+    - 從空白物件開始
+        -new Object()
+            -let obj = new Object();
+    - 建立物件成員
+        - 屬性成員
+            - 物件名稱.成員名稱 = 資料
+                - Obj.sid = 's001';
+                - Obj.sName = '1號同學';
+                - Obj.html = 100;
+                - Obj.css = 100;
+                - Obj.javascript = 100;
+        - 方法成員
+            - 物件名稱.函式名稱 = function(){
+                ...
+            }
+
+- 使用物件
