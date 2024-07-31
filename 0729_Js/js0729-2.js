@@ -10,7 +10,7 @@
 // 取得勾選的項目內容
 // 1. 找到按鈕
 let myBtn = document.querySelector('#btn');
-// 2. 監聽按鈕是否備按了(click => 左鍵一下的事件)
+// 2. 監聽按鈕是否備按了選取(click => 左鍵一下的事件)
 myBtn.addEventListener('click',function(){
     let arrResult = [];
     let arrResultNot = [];
