@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" id="txt1">
+        <input type="button" value="加入" id="btn">
+    </form>
+
+    <ul>
+        <li>HTML</li>
+    </ul>
+
+    <script>
+        // 取得文字方塊內容
+        
+        // console.log(newList);
+        // 取得按鈕事件
+        let myBtn = document.querySelector('#btn');
+        myBtn.addEventListener('click', () => {
+            let newList = document.querySelector('#txt1');
+
+            // 1. 建立新節點 => li
+            let newElm = document.createElement('li');
+            // 2. 建立文字節點 => css
+            let newText = document.createTextNode(newList.value);
+            // 3. 將文字節點加入到新節點
+            newElm.appendChild(newText);
+            // 4. 取得要加入新節點的位置
+            // let newPosition = document.getElementsByTagName('ul');
+            let getUL = document.querySelector('ul');
+            // 5. 將新節點加入到ul元素的最後一個子節點
+            getUL.appendChild(newElm);
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
