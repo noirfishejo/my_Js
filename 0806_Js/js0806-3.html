@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 事件基本語法
+    <div 事件名稱="程式碼">標籤內容</div> 
+    <button 事件名稱="程式碼">按鈕內容</button>
+    -->
+
+    <div onclick="changeP1();">按一下變更內容1</div>
+    <p>111Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, impedit molestiae numquam debitis hic qui
+        corporis distinctio consectetur placeat nisi quaerat in ipsum tempora omnis ratione ex sint quod adipisci?</p>
+    <h2 onclick="changeP2();">按一下變更內容2</h2>
+    <!-- <p id="p2">222Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, impedit molestiae numquam debitis hic qui
+        corporis distinctio consectetur placeat nisi quaerat in ipsum tempora omnis ratione ex sint quod adipisci?</p> -->
+    <p id="p2" class="p2">222Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, impedit molestiae numquam debitis hic qui
+        corporis distinctio consectetur placeat nisi quaerat in ipsum tempora omnis ratione ex sint quod adipisci?</p>
+    <script>
+        function changeP1() {
+            // 變更網頁body內容
+            // document.body.innerHTML='Hello';
+
+            // 變更段落內容
+            // querySelector 只會抓符合的第一個段落
+            // querySelectorAll 會抓符合的所有段落
+            // document.querySelector('p').innerHTML='Hello';
+
+            // 產生集合的陣列物件
+            // getElementsByTagName 會抓符合的所有段落，所以要設定抓取的段落編號
+            document.getElementsByTagName('p')[0].innerHTML = 'Hello1';
+        }
+        function changeP2() {
+            // 取得第二個段落改變內容
+            // document.getElementsByTagName('p')[1].innerHTML = 'Hello2';
+            
+            // 取得id改變段落內容
+            // document.getElementById('p2').innerHTML = 'Hello2';
+            document.getElementsByClassName('p2')[0].innerHTML = 'Hello2';
+            // document.querySelector('.p2').innerHTML = 'Hello2';
+        }
+
+    </script>
+
+</body>
+
+</html>

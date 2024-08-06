@@ -7,9 +7,17 @@
 </head>
 <body>
     <form action="">
-        <lable><input type="uid">帳號</lable>
-        <lable><input type="upw">密碼</lable>
-        <lable><input type="submit">送出</lable>
+        <lable>帳號<input type="text" id="uid"></lable>
+        <lable>密碼<input type="text" id="upw"></lable>
+        <!-- <input type="text" id="submit" value="送出"> -->
     </form>
+    <button onclick="chkData();">送出</button>
+
+    <script>
+        function chkData() {
+            alert('hi');
+        }
+    </script>
+
 </body>
 </html>
