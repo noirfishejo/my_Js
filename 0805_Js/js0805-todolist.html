@@ -90,7 +90,6 @@
             <form action="">
                 <input type="text" id="myInput">
                 <input type="button" value="加入" id="btn">
-                <input type="button" value="刪除" id="btn2">
             </form>
 
             <ul id="myUL">
@@ -100,7 +99,7 @@
         </div>
 
         <script>
-            // 新增li項目後面的刪除鈕
+            // 新增li項目後面的刪除鈕X
             var myNodelist = document.getElementsByTagName("li");
             var i;
             for (i = 0; i < myNodelist.length; i++) {
@@ -111,17 +110,18 @@
                 myNodelist[i].appendChild(span);
             }
 
-            // 刪除第一個li
-            btn2.addEventListener('click', () => {
-                // 取的第一個li
-                let removeElm = document.getElementsByTagName('li')[0];
-                // 找到父元素節點
-                let parentElm = removeElm.parentNode;
-                // 從父元素移除第一個li的子節點
-                parentElm.removeChild(removeElm);
-            });
+            // 按下X，刪除現有的li
+            var close = document.getElementsByClassName('close');
+                    for (i = 0; i < close.length; i++) {
+                        close[i].onclick = function () {
+                            var curLi = this.parentNode;
+                            curLi.style.display = 'none';
+                            // curLi.style.color = 'red';
+                            // curLi.style.text-decoration = 'line-through'; => 刪除線
+                        }
+                    }
 
-            // 取得按鈕事件
+            // 加入按鈕
             let myBtn = document.querySelector('#btn');
             myBtn.addEventListener('click', () => {
 
@@ -140,26 +140,30 @@
                 } else {
                     document.getElementById("myUL").appendChild(li);
 
-                    // 動態新增加入時的X
+                    // 按下加入時的新增X刪除紐
                     var span = document.createElement("span");
                     var txt = document.createTextNode("X");
                     span.className = "close";
                     span.appendChild(txt);
                     li.appendChild(span);
 
-                    let myClose = document.getElementsByTagName('close');
-                    for (i = 0; i < myClose.length; i++) {
-                        close[i].onclick = function () {
-                        }
+                    // 新增刪除動作
+                    span.onclick = function () {
+                        var curLi = this.parentNode;
+                        curLi.style.display = 'none';
+
                     }
                 }
+
+                // function delLi() {
+                //     var curLi = this.parentNode;
+                //     curLi.style.display = 'none';
+                // }
 
                 // 清除輸入框中的內容
                 document.getElementById("myInput").value = "";
             });
 
-            // 刪除li
-            var myClose = document.getElementsByClassName('close');
 
 
 

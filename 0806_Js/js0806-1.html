@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+    .wrap{
+        font-family: "Noto Serif TC";
+        letter-spacing: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 800px;
+        text-align: center;
+        font-size: 8rem;
+        font-weight: bold;
+        color: white;
+        background-color: blue;
+        padding: 15px 0 0;
+    }
+    marquee{
+        /* width: 800px; */
+    }
+</style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 跑馬燈 -->
+        <!-- 
+        behavior => 捲動方式
+        預設:scroll
+        左右來回:alternate
+        只移動一次:slide
+
+        scrollamount => 移動速度
+        direction => 移動方向
+        -->
+<marquee 
+    behavior="alternate" 
+    scrollamount="10"
+    onmouseover="stop();" 
+    onmouseout="start();" 
+    >
+    喵喵喵喵喵喵
+</marquee>
+</div>
+
+</body>
+</html>
