@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 調用被選取目標的內建屬性 -->
+    <button id="btn1">顯示訊息</button>
+    <script>
+        let btn1 = document.getElementById('btn1');
+
+        // e => event 物件
+        btn1.addEventListener('click', function (e) {
+            alert('喵喵');
+
+            // 顯示e物件中的所有資訊
+            console.log(e);
+
+            // 取得事件類型
+            console.log(e.type);
+
+            // 取得按鈕文字
+            console.log(e.target.innerHTML)
+
+        });
+    </script>
+</body>
+</html>
