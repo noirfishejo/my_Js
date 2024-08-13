@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+        }
+
+        #picL {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            margin-bottom: 50px;
+        }
+
+        .picS {
+            width: 600px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .picS img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 換圖輪播 -->
+    <div class="wrap">
+        <div>
+            <img id="picL" src="./image/nasa-1.jpg" alt="">
+        </div>
+        <div class="picS">
+            <!-- <img onclick="swap('./image/nasa-1.jpg');" class="pic1" src="./image/nasa-1.jpg" alt="">
+            <img onclick="swap('./image/nasa-2.jpg');" class="pic2" src="./image/nasa-2.jpg" alt="">
+            <img onclick="swap('./image/nasa-3.jpg');" class="pic3" src="./image/nasa-3.jpg" alt=""> -->
+
+            <img onclick="swap(this.src);" src="./image/nasa-1.jpg" alt="">
+            <img onclick="swap(this.src);" src="./image/nasa-2.jpg" alt="">
+            <img onclick="swap(this.src);" src="./image/nasa-3.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        function swap(picSrc) {
+            let picL = document.getElementById('picL');
+            picL.src = picSrc;
+        }
+
+        // function swap1(){
+        //     picL.src = './image/nasa-1.jpg';
+        // }
+
+        // function swap2(){
+        //     picL.src = './image/nasa-2.jpg';
+        // }
+
+        // function swap3(){
+        //     picL.src = './image/nasa-3.jpg';
+        // }
+
+    </script>
+</body>
+
+</html>

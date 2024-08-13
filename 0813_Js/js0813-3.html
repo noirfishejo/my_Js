@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+
+        div {
+            justify-content: center;
+            display: flex;
+            border: 1px solid #000;
+            height: 50vh;
+            width: 500px;
+        }
+
+        img {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 換圖輪播 -->
+    <div class="wrap">
+        <div>
+            <img onmouseover="changePic();" onmouseout="restorePic();" id="pic" src="./image/nasa-1.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+function changePic(){
+    let pic = document.getElementById('pic');
+    pic.src = './image/nasa-2.jpg'
+}
+function restorePic(){
+    let pic = document.getElementById('pic');
+    pic.src = './image/nasa-1.jpg'
+}
+    </script>
+</body>
+</body>
+</html>
