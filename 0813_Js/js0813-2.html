@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="myDiv"></div><br>
+        <button onclick="changeR();">紅</button>
+        <button onclick="changeG();">綠</button>
+        <button onclick="changeY();">黃</button>
+        <hr>
+        <button onclick="changeColor('r');">紅</button>
+        <button onclick="changeColor('g');">綠</button>
+        <button onclick="changeColor('y');">黃</button>
+    </div>
+
+    <script>
+        // 變紅色的功能
+        function changeR() {
+            // 抓目標
+            let mydiv = document.getElementById('myDiv');
+            // 變背景顏色
+            mydiv.style.backgroundColor = 'red';
+        }
+        // 變綠色的功能
+        function changeG() {
+            // 抓目標
+            let mydiv = document.getElementById('myDiv');
+            // 變背景顏色
+            mydiv.style.backgroundColor = 'green';
+        }
+        // 變黃色的功能
+        function changeY() {
+            // 抓目標
+            let mydiv = document.getElementById('myDiv');
+            // 變背景顏色
+            mydiv.style.backgroundColor = 'yellow';
+        }
+
+        // 整合上方函式為一個函式 => 傳參數
+
+        function changeColor(mycolor) {
+            // 抓目標
+            let mydiv = document.getElementById('myDiv');
+            let colorName = '';
+            if (mycolor == 'r') {
+                colorName = 'red'
+            } else if (mycolor == 'g') {
+                colorName = 'green'
+            } else if (mycolor == 'y') {
+                colorName = 'yellow'
+            } 
+            mydiv.style.backgroundColor = colorName;
+
+
+            // switch(mycolor) {
+            // case 'r':
+            //     mydiv.style.backgroundColor = 'red';
+            //     break;
+            // case 'g':
+            //     mydiv.style.backgroundColor = 'green';
+            //     break;
+            // case 'y':
+            //     mydiv.style.backgroundColor = 'yellow';
+            //     break;
+            // }
+            // 變背景顏色
+        }
+
+    </script>
+</body>
+
+
+</html>

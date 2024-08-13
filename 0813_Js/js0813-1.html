@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 2rem;
+            color: rgb(96, 176, 255);
+            cursor: pointer;
+        }
+
+        .hot {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .restoreHot {
+            font-size: 2rem;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 用style動態改文字顏色 -->
+    <p id="msg" onmouseover="changeColor();" onmouseout="restore();">Hello</p>
+    <script>
+        // 滑鼠碰到時變色
+        function changeColor() {
+            // 抓目標
+            let msg = document.getElementById('msg');
+            // 變文字顏色
+            msg.style.color = 'red';
+            // 變背景顏色
+            msg.style.backgroundColor = '#000';
+            // 套css預先做好的類別樣式
+            msg.className = 'hot';
+        }
+        // 滑鼠碰到時還原
+        function restore() {
+            // 抓目標
+            let msg = document.getElementById('msg');
+            // 還原文字顏色
+            msg.style.color = '';
+            // 還原背景顏色
+            msg.style.backgroundColor = '';
+            // 套css預先做好的類別樣式
+            msg.className = 'restoreHot';
+        }
+    </script>
+
+</body>
+
+</html>
