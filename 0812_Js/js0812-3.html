@@ -10,37 +10,38 @@
 <body>
     <form>
         <label for="uid">會員編號</label>
-        <input type="text" id="uid" size="15" maxlength="5"><br>
+        <input type="text" id="uid" size="10" maxlength="5"><br>
         <label for="mobile">手機號碼</label>
-        <input type="text" id="mobile" size="15" maxlength="10"><br>
+        <input type="text" id="mobile" size="10" maxlength="10"><br>
+        <span id="errMsg"></span><br>
         <input type="button" value="送出">
-        
     </form>
     <script>
         // 會員編號 5 個字
         let uid = document.getElementById('uid');
-        uid.addEventListener('blur', function (e) {
-            checkWordNum(e, 5, '會員編號');
-        });
-
-        // 手機號碼 10 個字
-        let mobile = document.getElementById('mobile');
-        mobile.addEventListener('blur', function (e) {
-            checkWordNum(e, 10, '手機號碼');
-        });
-
-        function checkWordNum(e, numLength, lblName) {
-            // 取得errMsg位置
+        uid.addEventListener('blur', function () {
             let errMsg = document.getElementById('errMsg');
             // 檢查文字方塊內容字數
-            if (e.target.value.length != numLength) {
+            if (this.value.length != 5) {
                 // 顯示提醒訊息
-                errMsg.textContent = `${lblName}必須為${numLength}個字`;
+                errMsg.textContent = '會員編號必須為5個字';
             } else {
                 // 清除提醒訊息
                 errMsg.textContent = '';
             }
-        }
+            // 手機號碼 10 個字
+            let mobile = document.getElementById('mobile');
+            mobile.addEventListener('blur', function () {
+                // 檢查文字方塊內容字數
+                if (this.value.length != 10) {
+                    // 顯示提醒訊息
+                    errMsg.textContent = '手機號碼必須為10個字';
+                } else {
+                    // 清除提醒訊息
+                    errMsg.textContent = '';
+                }
+            });
+        });
     </script>
 </body>
 
