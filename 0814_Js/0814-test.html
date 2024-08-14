@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <h2>變更下拉是清單的項目時，開啟網頁</h2>
+    <form>
+        <!-- <label for="URL">選擇網站:</label> -->
+        <select name="" id="URL">
+            <option value="">請選擇</option>
+            <option value="https://www.google.com.tw/?hl=zh_TW">Google</option>
+            <option value="https://www.facebook.com/?locale=zh_TW">Facebook</option>
+            <option value="https://github.com/">Github</option>
+        </select>
+    </form>
+
+    <script>
+        // 取得下拉方塊
+        let url = document.getElementById('URL');
+        // 監聽 change 事件
+        url.addEventListener('change', function () {
+            // 取得下拉選單中的值
+            // 跳轉到指定網址
+            location.href = url.value;
+        });
+    </script>
 </body>
+
 </html>
