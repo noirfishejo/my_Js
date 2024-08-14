@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 滑鼠事件偵測滑鼠目前位置 -->
+    <div id="box"></div>
+
+    <script>
+        let box = document.getElementById('box');
+        box.addEventListener('mousemove', function (e) {
+            box.innerHTML = 
+            `
+            screenX:${e.screenX}, screenY:${e.screenY}<br>
+            pageX:${e.pageX}, pageY:${e.pageY}<br>
+            clientX:${e.clientX}, clientY:${e.clientY}<br>
+            offsetX:${e.offsetX}, offsetY:${e.offsetY}<br>
+            `;
+        });
+    </script>
+</body>
+
+</html>
