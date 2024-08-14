@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./js0814-3b.html" id="myfrm">
+        <label for="username">姓名</label>
+        <input type="text" id="username">
+        <input type="submit">
+    </form>
+    <button id="delbtn">刪除姓名</button>
+
+
+    <script>
+        // 刪除姓名(Local storage 中的 username)
+        let delbtn = document.getElementById('delbtn');
+        delbtn.addEventListener('click', function(){
+            if (window.confirm('確定要刪除姓名嗎?')){
+                window.localStorage.removeItem('username');
+                alert('姓名已刪除!');
+            } else {
+                alert('刪除已取消');
+            }
+        });
+
+        // 取得表單
+        let myfrm = document.getElementById('myfrm');
+        myfrm.addEventListener('submit',function (e) {
+            // 使用確認對話方塊
+            if (window.confirm('確定送出表單資料?')){
+                // 取得姓名文字方塊
+                let username = document.getElementById('username');
+                // 寫入時機：跨頁使用
+                // 寫入姓名資料到 Local storage
+                window.localStorage.setItem('username',username.value);
+                alert(username.value + '成功送出');
+            } else {
+                e.preventDefault(); // 取消預設行為(不執行表單action的動作)
+                alert('取消送出');
+            }
+        });
+
+        // 取得submit
+        // 使用確認對話方塊(確認視窗)
+    </script>
+    
+</body>
+</html>
