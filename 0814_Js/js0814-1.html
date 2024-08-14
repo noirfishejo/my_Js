@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./js0814-1-login.html">
+        <label for="uid">帳號</label>
+        <input type="text" id="uid">
+        <br>
+        <label for="upw">密碼</label>
+        <input type="text" id="upw">
+        <br>
+        <input id="btn" type="submit" value="登入1" >
+        <input id="btn2" type="button" value="登入2" >
+    </form>
+    <!-- 存放資料在本機端瀏覽器中的Local storage -->
+<script>
+    // 登入1按鈕，使用submit搭配action跳轉
+    let btn = document.getElementById('btn');
+    btn.addEventListener('click',function (){
+        let uid = document.getElementById('uid');
+        // console.log(uid.value);
+        // 寫入Local storage
+        window.localStorage.setItem('user_id',uid.value);
+        let upw = document.getElementById('upw');
+        window.localStorage.setItem('user_pw',upw.value);
+    });
+
+    // 登入2按鈕，使用跳轉頁面指令
+    let btn2 = document.getElementById('btn2');
+    btn2.addEventListener('click',function () { 
+        let uid = document.getElementById('uid');
+        window.localStorage.setItem('user_id',uid.value);
+        let upw = document.getElementById('upw');
+        window.localStorage.setItem('user_pw',upw.value);
+        window.location.href = './js0814-1-login.html';
+    });
+
+
+    // 清除
+    // window.localStorage.clear();
+    // 寫入資料(變數不可數字開頭)
+    // window.localStorage.setItem('a2','5');
+    // window.localStorage.setItem('a3','8');
+</script>
+</body>
+</html>
