@@ -13,20 +13,20 @@
         <!-- 會員中心左側選單 -->
         <ul class="member-left">
             <li class="member-management">
-                <a href="#" class="big-item">會員管理</a>
+                <a href="#" class="big-item" id="membmanage">會員管理</a>
                 <ul class="dropdown">
                     <li><a href="#" class="small-item" onclick="changeToMemb()">會員資料</a></li>
                     <li><a href="#" class="small-item" onclick="changeToAcco()">帳號管理</a></li>
                 </ul>
             </li>
             <li class="appointment-management">
-                <a href="#" class="big-item">預約管理</a>
+                <a href="#" class="big-item" id="book">預約管理</a>
                 <ul class="dropdown">
                     <li><a href="#" class="small-item" onclick="changeToProg()">進行中</a></li>
                     <li><a href="#" class="small-item" onclick="changeToHist()">歷史紀錄</a></li>
                 </ul>
             </li>
-            <li><a href="#" class="big-item" onclick="changeToLike()">已收藏的心理師</a></li>
+            <li><a href="#" class="big-item" onclick="changeToLike()">已收藏</a></li>
             <li><a href="#" class="big-item" onclick="changeToPriv()">隱私政策</a></li>
             <li><a href="#" class="big-item" onclick="changeToFaq()">常見問題</a></li>
         </ul>
@@ -122,15 +122,15 @@
                 <div class="form-group">
                     <label for="link">第三方帳號綁定</label>
                     <div class="linkwrap">
-                    <div class="fbgoogle">
-                        <img src="./images/Facebook.svg" alt="綁定facebook帳號按鈕">
-                        <p>已綁定</p>
+                        <div class="fbgoogle">
+                            <img src="./images/Facebook.svg" alt="綁定facebook帳號按鈕">
+                            <p>已綁定</p>
+                        </div>
+                        <div class="fbgoogle">
+                            <img src="./images/Chrome.svg" alt="綁定google帳號按鈕">
+                            <p>已綁定</p>
+                        </div>
                     </div>
-                    <div class="fbgoogle">
-                        <img src="./images/Chrome.svg" alt="綁定google帳號按鈕">
-                        <p>已綁定</p>
-                    </div>
-                </div>
                 </div>
                 <div class="form-group">
                     <label for="email">信箱</label>
@@ -141,9 +141,9 @@
                     <input type="text" />
                 </div>
                 <div class="editacco">
-                <small class="editdata" onclick="changeToPw()">修改密碼</small>
-                <small class="deldata">刪除帳號</small>
-            </div>
+                    <small class="editdata" onclick="changeToPw()">修改密碼</small>
+                    <small class="deldata">刪除帳號</small>
+                </div>
             </form>
         </div>
 
@@ -158,27 +158,54 @@
 
             <form class="member-form">
                 <div class="form-group">
-                    <label for="name">信箱</label>
+                    <label for="emal">信箱</label>
                     <input type="text" />
                 </div>
                 <div class="form-group">
-                    <label for="nickname">新密碼</label>
+                    <label for="newpw">新密碼</label>
                     <input type="text" />
                 </div>
                 <div class="form-group">
-                    <label for="email">確認新密碼</label>
-                    <input type="email" />
+                    <label for="confirm">確認新密碼</label>
+                    <input type="text" />
                 </div>
                 <button type="submit" class="submit-button" onclick="changeToAcco()"> 儲存</button>
                 <button type="cancel" class="cancel-button" onclick="changeToAcco()">取消</button>
             </form>
         </div>
 
-        <div id="prog" style="display: none;">
+        <!-- 進行中卡片 -->
+        <div id="prog" class="member-container" style="display: none;">
+            <h1 class="title">預約管理</h1>
+            <div class="tabs">
+                <a href="#" class="tab active" onclick="changeToProg()">進行中</a>
+                <a href="#" class="tab" onclick="changeToHist()">歷史紀錄</a>
+            </div>
+        </div>
 
+        <!-- 歷史紀錄卡片 -->
+        <div id="hist" class="member-container" style="display: none;">
+            <h1 class="title">預約管理</h1>
+            <div class="tabs">
+                <a href="#" class="tab" onclick="changeToProg()">進行中</a>
+                <a href="#" class="tab active" onclick="changeToHist()">歷史紀錄</a>
+            </div>
         </div>
-        <div id="hist" style="display: none;">
-        </div>
+
+                <!-- 已收藏卡片 -->
+                <div id="like" class="member-container" style="display: none;">
+                    <h1 class="title">已收藏的心理師</h1>
+                </div>
+
+                <!-- 隱私政策卡片 -->
+                <div id="priv" class="member-container" style="display: none;">
+                    <h1 class="title">隱私政策</h1>
+                </div>
+
+                <!-- 常見問題卡片 -->
+                <div id="faq" class="member-container" style="display: none;">
+                    <h1 class="title">常見問題</h1>
+                </div>
     </main>
 
 
@@ -282,6 +309,14 @@
                 });
             }
         });
+
+        // let membmanage = document.querySelector(".member-management");
+
+        // if (membDiv.style.display === 'block' || accoDiv.style.display === 'block' || pwDiv.style.display === 'block') {
+        //             membmanage.classList.add('active'); // 添加active類名，模擬hover效果
+        //         } else {
+        //             membmanage.classList.remove('active'); // 移除active類名
+        //         }
     </script>
 </body>
 
